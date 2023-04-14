@@ -10,7 +10,6 @@ const saveFormStateToLocalStorage = throttle(() => {
   };
   localStorage.setItem(key, JSON.stringify(formState));
 }, 500);
-
 form.addEventListener('input', saveFormStateToLocalStorage);
 
 const formStateFromLocalStorage = JSON.parse(
